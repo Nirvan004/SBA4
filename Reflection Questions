@@ -1,0 +1,9 @@
+Reflection: Write a short reflection (100-200 words) included within the repository discussing:
+
+Challenges faced during the project.
+How you approached solving those challenges.
+What you would improve if given more time.
+
+The extra index.js file was before I read that the files should be named specific things so please ignore that empty file :D. 
+
+This project was fairly easy to create with the help of google, a lot of this stuff is mostly base info about taking inputs and adding those inputs into readable arrays, using my prior python knowledge that wasnt to hard to do. Using custom html to do things like the date and the dropdown menu was very nice to find on google and I definetly couldnt have found that without doing research. I approached solving these challenges by breaking everything down into easy parts, like adding all the html for inputs first, then using javascript to read this info, then making a place to display it etc. it was very fun to break everything down into easily used parts. If given more time I would love to tackle the optional step 5 and add more functionality like maybe a calender display that shows all the tasks on a calender as well as todays date so you can more easily see how close/far something is to that days date. 
