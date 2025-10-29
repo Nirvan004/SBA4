@@ -39,6 +39,10 @@ function displayTasks() {
 
     tasks.forEach((task, index) => {
         const li = document.createElement("li");
+        const today = new Date().toISOString().split("T")[0];
+        if (task.status !== "Completed" && task.deadline < today) {
+            task.status = "Overdue";
+        }
 
         li.innerHTML = `
             <strong>${task.name}</strong> | 
