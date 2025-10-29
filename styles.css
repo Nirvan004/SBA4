@@ -26,3 +26,14 @@ th {
 select {
     padding: 5px;
 }
+.completed {
+    background-color: #d4edda;
+}
+
+.in-progress {
+    background-color: #fff3cd; 
+}
+
+.overdue {
+    background-color: #f8d7da;
+}
