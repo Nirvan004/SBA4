@@ -24,10 +24,29 @@ addTaskBtn.addEventListener('click', function() {
         status: taskStatus
     };
     tasks.push(newTask);
-    
+    displayTasks();
     taskNameInput.value = "";
     taskCategoryInput.value = "";
     taskDeadlineInput.value = "";
     taskStatusInput.value = "In Progress";
 
 });
+
+function displayTasks() {
+    const taskListUl = document.getElementById("taskList");
+
+    taskListUl.innerHTML = "";
+
+    tasks.forEach((task, index) => {
+        const li = document.createElement("li");
+
+        li.innerHTML = `
+            <strong>${task.name}</strong> | 
+            Category: ${task.category} | 
+            Deadline: ${task.deadline} | 
+            Status: ${task.status} 
+        `;
+
+        taskListUl.appendChild(li);
+    });
+}
