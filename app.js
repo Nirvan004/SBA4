@@ -44,7 +44,12 @@ function displayTasks() {
             <strong>${task.name}</strong> | 
             Category: ${task.category} | 
             Deadline: ${task.deadline} | 
-            Status: ${task.status} 
+            Status: 
+            <select id="status-${index}">
+                <option value="In Progress" ${task.status === "In Progress" ? "selected" : ""}>In Progress</option>
+                <option value="Completed" ${task.status === "Completed" ? "selected" : ""}>Completed</option>
+                <option value="Overdue" ${task.status === "Overdue" ? "selected" : ""}>Overdue</option>
+            </select>
         `;
 
         taskListUl.appendChild(li);
