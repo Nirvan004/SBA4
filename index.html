@@ -27,6 +27,19 @@
         <button id="addTask">Add Task</button>
     </div>
 
+    <div>
+    <label for="filterStatus">Filter by Status:</label>
+    <select id="filterStatus">
+        <option value="All">All</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Completed">Completed</option>
+        <option value="Overdue">Overdue</option>
+    </select>
+
+    <label for="filterCategory">Filter by Category:</label>
+    <input type="text" id="filterCategory" placeholder="Enter category to filter">
+    </div>
+
     <div id="tasklist">
         <h2>Task List</h2>
         <ul id="taskList"></ul>
