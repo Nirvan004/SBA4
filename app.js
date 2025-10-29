@@ -6,6 +6,12 @@ const taskDeadlineInput = document.getElementById('taskDeadline');
 const taskStatusInput = document.getElementById('taskStatus');
 const addTaskBtn = document.getElementById('addTask');
 
+const filterStatus = document.getElementById("filterStatus");
+const filterCategory = document.getElementById("filterCategory");
+
+filterStatus.addEventListener("change", displayTasks);
+filterCategory.addEventListener("input", displayTasks);
+
 addTaskBtn.addEventListener('click', function() {
     const taskName = taskNameInput.value.trim();
     const taskCategory = taskCategoryInput.value.trim();
@@ -15,6 +21,13 @@ addTaskBtn.addEventListener('click', function() {
     if (!taskName || !taskCategory || !taskDeadline) {
         alert("Please fill in all the fields!");
         return;
+    }
+
+    if (filterStatus.value !== "All" && task.status !== filterStatus.value) {
+        return; // skip this task
+    }
+    if (filterCategory.value && !task.category.toLowerCase().includes(filterCategory.value.toLowerCase())) {
+        return; // skip if category doesn't match
     }
 
     const newTask = {
