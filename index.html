@@ -8,10 +8,20 @@
 <body>
     <h1>Task Manager</h1>
     <div>
-    <label for="taskName">Task Name:</label>
-    <input type="text" id="taskName" placeholder="Enter task name">
-    <br><br>
+        <label for="Name">Task Name:</label>
+        <input type="text" id="taskName" placeholder="Enter task name">
+        <br><br>
+        <label for="Category">Category:</label>
+        <input type="text" id="taskCategory" placeholder="e.g., Work or Personal">
+        <br><br>
+        <label for="taskStatus">Status:</label>
+        <select id="taskStatus">
+            <option value="In Progress">In Progress</option>
+            <option value="Completed">Completed</option>
+        </select>
+        <br><br>
 
-  </div>
+        <button id="addTask">Add Task</button>
+    </div>
 </body>
 </html>
