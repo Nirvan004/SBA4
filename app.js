@@ -53,5 +53,11 @@ function displayTasks() {
         `;
 
         taskListUl.appendChild(li);
+
+        const statusSelect = document.getElementById(`status-${index}`);
+        statusSelect.addEventListener("change", function () {
+            task.status = this.value;
+            displayTasks();
+        });
     });
 }
