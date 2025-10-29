@@ -57,7 +57,22 @@ function displayTasks() {
             task.status = "Overdue";
         }
 
-        li.innerHTML = `
+        const tr = document.createElement("tr");
+        
+        tr.innerHTML = `
+            <td>${task.name}</td>
+            <td>${task.category}</td>
+            <td>${task.deadline}</td>
+            <td>
+                <select id="status-${index}">
+                    <option value="In Progress" ${task.status === "In Progress" ? "selected" : ""}>In Progress</option>
+                    <option value="Completed" ${task.status === "Completed" ? "selected" : ""}>Completed</option>
+                    <option value="Overdue" ${task.status === "Overdue" ? "selected" : ""}>Overdue</option>
+                </select>
+            </td>
+        `;
+
+        /*li.innerHTML = `
             <strong>${task.name}</strong> | 
             Category: ${task.category} | 
             Deadline: ${task.deadline} | 
@@ -68,6 +83,7 @@ function displayTasks() {
                 <option value="Overdue" ${task.status === "Overdue" ? "selected" : ""}>Overdue</option>
             </select>
         `;
+        */
 
         taskListUl.appendChild(li);
 
