@@ -72,6 +72,14 @@ function displayTasks() {
             </td>
         `;
 
+        if (task.status === "Completed") {
+            tr.classList.add("completed");
+        } else if (task.status === "In Progress") {
+            tr.classList.add("in-progress");
+        } else if (task.status === "Overdue") {
+            tr.classList.add("overdue");
+        }
+
         /*li.innerHTML = `
             <strong>${task.name}</strong> | 
             Category: ${task.category} | 
